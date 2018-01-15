@@ -1,1 +1,11 @@
-<h1>This is the Akiko home page</h1>
+<center><h1>Application Dashboard</h1></center>
+<center><%= link_to "Create New Post", new_post_path(@post) %></center>
+<br>
+
+<% @posts.each do |post| %>
+    <h2><%= post.title %></h2>
+    <div><%= truncate(post.body, :length => 35) %></div>
+    <br>
+    <%= link_to "Read Post", post %>
+
+<% end %>
