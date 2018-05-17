@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  
+
   before_action :find_post, only: [:show, :edit, :update, :destroy]
 
     def index
@@ -41,7 +41,7 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
 
-
+    # PRIVATE
     private
 
     def find_post
